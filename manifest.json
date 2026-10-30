@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "DIGEIG - Automatizador Datos Abiertos",
+  "version": "1.0.0",
+  "description": "Panel flotante para automatizar la calificación de Datos Abiertos (5.00 / Cumple 100%) en el portal de DIGEIG.",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://evaluacion.digeig.gob.do/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+

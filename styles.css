@@ -1,0 +1,208 @@
+#digeig-auto-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 360px;
+  background: #ffffff;
+  border: 2px solid #003876;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  z-index: 2147483647;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+#digeig-auto-panel.minimized {
+  width: 240px;
+}
+
+#digeig-auto-panel.minimized .digeig-auto-body {
+  display: none;
+}
+
+.digeig-auto-header {
+  background: #003876;
+  color: #ffffff;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.digeig-auto-title {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.digeig-auto-toggle {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digeig-auto-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.digeig-auto-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.digeig-auto-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.digeig-auto-textarea {
+  width: 100%;
+  height: 110px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.digeig-auto-textarea:focus {
+  outline: none;
+  border-color: #003876;
+  box-shadow: 0 0 0 2px rgba(0, 56, 118, 0.15);
+}
+
+.digeig-auto-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.digeig-btn {
+  flex: 1;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.digeig-btn:active {
+  transform: scale(0.98);
+}
+
+.digeig-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.digeig-btn-primary {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.digeig-btn-primary:hover:not(:disabled) {
+  background: #15803d;
+}
+
+.digeig-btn-stop {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.digeig-btn-stop:hover:not(:disabled) {
+  background: #b91c1c;
+}
+
+.digeig-btn-secondary {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.digeig-btn-secondary:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.digeig-auto-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #475569;
+  background: #f8fafc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.digeig-auto-options input[type="number"] {
+  width: 55px;
+  padding: 3px 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.digeig-auto-log {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Consolas', monospace;
+  font-size: 11px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  height: 110px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.digeig-log-item {
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.digeig-log-ok {
+  color: #4ade80;
+}
+
+.digeig-log-warn {
+  color: #facc15;
+}
+
+.digeig-log-err {
+  color: #f87171;
+}
+
+.digeig-log-info {
+  color: #93c5fd;
+}
+
